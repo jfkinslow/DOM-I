@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let nav = document.querySelector('.container header nav');
 let navList = document.querySelectorAll('.container header nav a');
 let counter = 1;
 console.log(navList);
@@ -47,6 +48,14 @@ navList.forEach(() => {
   navList[counter-1].innerText = siteContent["nav"][`nav-item-${counter}`];
   counter++;
 });
+let newNavItem1 = document.createElement('a');
+newNavItem1.setAttribute('href', "#");
+newNavItem1.innerText = "First JS Child";
+let newNavItem2 = document.createElement('a');
+newNavItem2.setAttribute('href', "#");
+newNavItem2.innerText = "Second JS Child";
+nav.appendChild(newNavItem1);
+nav.appendChild(newNavItem2);
 let splitItem = siteContent["cta"]["h1"].split(" ");
 document.querySelector('.container .cta .cta-text h1').innerHTML = `${splitItem[0]}<br>${splitItem[1]}<br>${splitItem[2]}`;
 document.querySelector('.container .cta .cta-text button').innerText = siteContent["cta"]["button"];
