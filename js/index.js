@@ -56,3 +56,12 @@ let topText = document.querySelectorAll('.container .main-content .top-content .
 console.log(topText);
 topText[0].innerHTML = `<h4>${siteContent["main-content"]["features-h4"]}</h4><p>${siteContent["main-content"]["features-content"]}</p>`;
 topText[1].innerHTML = `<h4>${siteContent["main-content"]["about-h4"]}</h4><p>${siteContent["main-content"]["about-content"]}</p>`;
+document.querySelector('.middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+let bottomText = document.querySelectorAll('.container .main-content .bottom-content .text-content');
+bottomText[0].innerHTML = `<h4>${siteContent["main-content"]["services-h4"]}</h4><p>${siteContent["main-content"]["services-content"]}</p>`;
+bottomText[1].innerHTML = `<h4>${siteContent["main-content"]["product-h4"]}</h4><p>${siteContent["main-content"]["product-content"]}</p>`;
+bottomText[2].innerHTML = `<h4>${siteContent["main-content"]["vision-h4"]}</h4><p>${siteContent["main-content"]["vision-content"]}</p>`;
+let addrSplit = siteContent["contact"]["address"].split(" ");
+let contactHTML = `<h4>${siteContent["contact"]["contact-h4"]}</h4><p>${addrSplit[0]} ${addrSplit[1]} ${addrSplit[2]} ${addrSplit[3]}<br>${addrSplit[4]} ${addrSplit[5]}</p><p>${siteContent["contact"]["phone"]}</p><p>${siteContent["contact"]["email"]}</p>`;
+document.querySelector('.container .contact').innerHTML = contactHTML;
+document.querySelector('.container footer').innerHTML = `<p>${siteContent["footer"]["copyright"]}</p>`
