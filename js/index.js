@@ -49,7 +49,7 @@ navList.forEach((current) => {
 });
 let newNavItem1 = document.createElement('a').setAttribute('href', "#").innerText = "First JS Child";
 let newNavItem2 = document.createElement('a').setAttribute('href', "#").innerText = "Second JS Child";
-nav.appendChild(newNavItem1);
+nav.prepend(newNavItem1);
 nav.appendChild(newNavItem2);
 let splitItem = siteContent["cta"]["h1"].split(" ");
 document.querySelector('.container .cta .cta-text h1').innerHTML = `${splitItem[0]}<br>${splitItem[1]}<br>${splitItem[2]}`;
